@@ -1,4 +1,4 @@
-# 📐 Algebra Quiz Game
+# 📐 Algebra Quiz Web App
 
 An educational Flutter-based quiz app that helps users master linear equations through gamified levels ranging from easy one-variable equations to challenging three-variable systems.
 
@@ -112,6 +112,11 @@ This app is designed to:
     Provide practice from beginner to advanced
 
     Serve as a tool for classroom or self-paced learning
+
+## 📸 Screenshots
+
+![App Screenshot](assets/screenshots/home-page.png)
+![App Screenshot](assets/screenshots/drawer-page.png)
 
 ## 🤝 Contributing
 
