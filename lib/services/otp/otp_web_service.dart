@@ -11,23 +11,24 @@ class OtpWebService {
   OtpWebService._internal();
 
   void connect() {
-    _socket = WebSocket(Uri.parse("ws://localhost:8000/ws/otp"));
+    _socket = WebSocket(
+      Uri.parse("https://flutter-algebra-quiz-app-backend.onrender.com"),
+    );
   }
 
   void sendOtp(String email) {
     _socket?.send(jsonEncode({"email": email}));
   }
 
-  
   Future<String> getOtp() async {
-  final completer = Completer<String>();
+    final completer = Completer<String>();
 
-  _socket!.messages.listen((message) {
-    final data = jsonDecode(message);
-    final otp = data["otp"];
-    completer.complete(otp); // Complete the future
-  });
+    _socket!.messages.listen((message) {
+      final data = jsonDecode(message);
+      final otp = data["otp"];
+      completer.complete(otp); // Complete the future
+    });
 
-  return completer.future;
-}
+    return completer.future;
+  }
 }
