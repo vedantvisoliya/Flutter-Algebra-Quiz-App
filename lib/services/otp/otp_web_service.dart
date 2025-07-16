@@ -12,7 +12,7 @@ class OtpWebService {
 
   void connect() {
     _socket = WebSocket(
-      Uri.parse("https://flutter-algebra-quiz-app-backend.onrender.com"),
+      Uri.parse("wss://flutter-algebra-quiz-app-backend.onrender.com/ws/otp"),
     );
   }
 
